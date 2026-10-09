@@ -1,0 +1,5 @@
+# Generated from the combos section of randomcontainers/audiowaveform package.yml by randomcontainers/ci.
+# Do not edit; change package.yml in randomcontainers/audiowaveform instead.
+name: audiowaveform-ffmpeg
+owner: audiowaveform
+with: [ffmpeg]
