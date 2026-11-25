@@ -58,7 +58,7 @@ gh attestation verify oci://ghcr.io/randomcontainers/audiowaveform-ffmpeg:latest
   --repo randomcontainers/audiowaveform-ffmpeg --signer-repo randomcontainers/ci
 ```
 
-Each image also has a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures:
+Images published since November 2026 also have a keyless cosign signature from the same workflow, for admission controllers that check cosign signatures. Tags last built before then have only the attestation.
 
 ```sh
 cosign verify ghcr.io/randomcontainers/audiowaveform-ffmpeg:latest \
@@ -67,7 +67,7 @@ cosign verify ghcr.io/randomcontainers/audiowaveform-ffmpeg:latest \
   --certificate-github-workflow-repository randomcontainers/audiowaveform-ffmpeg
 ```
 
-Images from `ghcr.io/randomcontainers/audiowaveform` are built in [randomcontainers/audiowaveform](https://github.com/randomcontainers/audiowaveform), so name that repository in `--repo` and `--certificate-github-workflow-repository`.
+Images from `ghcr.io/randomcontainers/audiowaveform` are built in [randomcontainers/audiowaveform](https://github.com/randomcontainers/audiowaveform), so use `randomcontainers/audiowaveform` in `--repo` and `--certificate-github-workflow-repository`.
 
 ## Updates
 
